@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<!-- Q: Is it better to call the default layout then build around it, or to copy and past that into here? -->
+<!-- Q: I know styling inline isn't best practice. is it different for layouts? From tutorial: "Image path declared with inline styles because this is the only way jekyll will grab it"
+
+To get the image for each header is it better to call the featImg from the front matter, or to embed it in the CSS (case-study.sass) {{ page.featImg}} ?
+   
+<header class="case-studies-header" style="background-image:url('{{ site.url }}{{ site.path-to-CS-images }}{{ page.featImg }}');' "></header>
+
+<header class="case-studies-header" style="background-image:url('{{ site.url }}{{ page.featImg }}');' "></header>
+-->
+
+<header class="case-studies-header">
+   <div>
+      <!-- <img src="{{ site.url }}{{ site.path-to-CS-images }}{{ page.featImg }}" alt=""> -->
+   </div>
+</header>
+
+
+<div class="case-studies-title" id="top">
+   <h1>{{ page.title }}</h1>
+</div>
+
+<main class="case-studies-content-wrapper">
+   {% comment %}
+   <!-- {% include process-nav.html %} -->
+   {% endcomment %}
+   {{ content }}
+</main>

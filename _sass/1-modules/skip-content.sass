@@ -1,0 +1,25 @@
+//Skip to main content box//
+.skip-content-link
+   position: absolute
+   left: 0px
+   z-index: 999
+   padding: 10px
+   color: white
+   background: black 
+   border-bottom-right-radius: 10px
+   transform: translateY(-100%)
+   //-webkit-transition: transform 1s ease-out
+   transition: transform 1s ease-out
+
+
+//Skip to main content box animation//
+.skip-content-link:focus
+   left: 0px
+   transform: translateY(0%)
+   //-webkit-transition: transform .2s ease-in
+   transition: transform .2s ease-in
+
+//Tone down the animation to avoid vestibular motion triggers//
+@media (prefers-reduced-motion: reduce) 
+   .skip-content-link
+      transition-duration: 0.001ms !important

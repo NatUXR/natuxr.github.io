@@ -1,0 +1,231 @@
+---
+layout: default
+title: Portfolio
+tagline: Portfolio hosted on GitHub Pages
+description: Portfolio
+---
+
+<!--  Header -->
+<header class="header-wrapper">
+  
+  <div class="intro">
+    <div class="name">
+      <span class="color-effect"></span>
+      <h1>Hi, I'm Natalie<span></span></h1>
+    </div>
+
+    <div class="about">
+      <div class="color-effect"></div>
+      <p>
+        _I do user research + ethnography
+        <br />
+        _I use my background in anthropology + cognitive science to try & understand the intersections of lived experiences + contexts 
+        <br />
+        _In my work I break complex problems into understandable componenets & provide actionable findings 
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- Section Divider -  -->
+
+
+<!-- Loop to display all case studies on website -->
+
+<!-- Alternative for link to case study, removes title from <a> 
+  Option 1: <a href="{{ case-study.url }}">{{ case-study.title }}</a>
+ -->
+
+
+
+ <main class="projects-content-wrapper" id="main">
+
+  <!-- Section Header -->
+  <!-- When uncommented it messed up the nth-child(1) selection. Why? -->
+  <div class="projects-header">
+    <h2>Case Studies & Projects</h2>
+  </div>
+  
+  {% for case-study in site.case-studies %}
+
+    <article class="case-study-preview">
+      <div class="project">
+        <!-- <div class="project-img featured-project-img" style="background-image:url('{{ site.url }}{{ site.path-to-CS-images }}{{ case-study.featImg }}')"></div> -->
+        <!--Image path declared with inline styles because this is the only way jekyll will grab it.-->
+        <div class="project-img" >
+          <img src="{{ site.url }}{{ site.path-to-CS-images }}{{ case-study.featImg }}" alt="">
+        </div>
+        <div class="project-text">
+          <a href="{{ case-study.url }}" target="_blank">
+            <h3>{{ case-study.title }}</h3> 
+          </a>
+          <div class="column-text">
+            <p>{{ case-study.summary }}</p>
+            <span aria-hidden="true"> Read the case study 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.25 5.69">
+                <title>arrow-slim</title>
+                <polygon points="6.81 2.86 4.85 4.97 4.33 4.49 5.6 3.12 0.38 3.12 0.38 2.37 5.6 2.37 4.42 1.09 4.94 0.61 6.81 2.62 6.81 2.86"></polygon>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  {% endfor %}
+</main>
+
+
+<!--  Case Studies & Projects -->
+<main class="projects-content-wrapper" id="main">
+
+  Section Header
+  <div class="projects-header">
+    <h2>Case Studies & Projects</h2>
+  </div>
+
+  <!--  Project 1 - Featured -->
+  <article class="case-study-preview featured">
+    <div class="project">
+      <div class="project-img featured-project-img"></div>
+      <a href="" target="_blank" class="project-text">
+        <h3>Spot</h3>
+        <!--should use h3 for accesibility reasons, but can style like h4 if I like that better-->
+        <p>Ramen business model canvas buzz facebook ecosystem low hanging fruit.</p>
+      </a>
+      <span aria-hidden="true"> Read the case study 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.25 5.69">
+          <title>arrow-slim</title>
+          <polygon points="6.81 2.86 4.85 4.97 4.33 4.49 5.6 3.12 0.38 3.12 0.38 2.37 5.6 2.37 4.42 1.09 4.94 0.61 6.81 2.62 6.81 2.86"></polygon>
+        </svg>
+      </span>
+    </div>
+  </article>
+
+  <!--  Project 2 -->
+  <article class="case-study-preview">
+    <div class="project">
+      <div class="project-img project-img-two"></div>
+      <a href="" target="_blank" class="project-text">
+        <h4>Project Title</h4>
+        <p> Supply chain infrastructure pitch buyer responsive web design founders agile development backing. Supply chain infrastructure pitch buyer responsive web design founders agile development backing. Supply chain cat.</p>
+        <span aria-hidden="true"> Read the case study 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.25 5.69">
+            <title>arrow-slim</title>
+            <polygon points="6.81 2.86 4.85 4.97 4.33 4.49 5.6 3.12 0.38 3.12 0.38 2.37 5.6 2.37 4.42 1.09 4.94 0.61 6.81 2.62 6.81 2.86"></polygon>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </article>
+
+  <!--  Project 3 - Reversed-->
+  <article class="case-study-preview reverse">
+    <div class="project">
+      <div class="project-img project-img-three"></div>
+      <a href="" target="_blank" class="project-text">
+        <h4>TritonLink</h4>
+        <p>IPhone accelerator venture rockstar stock investor iPad pivot.</p>
+        <span aria-hidden="true"> Read the case study 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.25 5.69">
+            <title>arrow-slim</title>
+            <polygon points="6.81 2.86 4.85 4.97 4.33 4.49 5.6 3.12 0.38 3.12 0.38 2.37 5.6 2.37 4.42 1.09 4.94 0.61 6.81 2.62 6.81 2.86"></polygon>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </article>
+</main>
+
+<hr/>
+
+<!--  Style Sheet -->
+<br /><br /><br /><br />
+
+
+<div class="poor-persons-styleguide">
+  <h1>h1 Style Guide</h1>
+  <br /><br />
+
+  <h2>
+    h2 Capitalize on low hanging fruit to identify a ballpark value added activity to beta test.
+  </h2>
+
+  <br /><br />
+
+  <h3>
+    h3 Override the digital divide with additional clickthroughs from DevOps.
+  </h3>
+
+  <br /><br />
+
+  <h4>
+    h4 Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+  </h4>
+
+  <br /><br />
+
+  <h5>
+    h5 Leverage agile frameworks to provide a robust synopsis for high level overviews.
+  </h5>
+
+  <br /><br />
+
+  <h6>
+    h6 Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+  </h6>
+
+  <br /><br />
+
+  <p>
+    p Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination.
+
+    At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Advisor long tail crowdsource. 
+  </p>
+
+  <br /><br />
+
+  <small>
+    small Holy grail mass market. Social proof seed money long tail supply chain gamification.
+  </small>
+</div>
+
+
+<br /><br />
+
+
+<!-- Section Divider - Big Triangle Shadow -->
+<!-- <svg id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d7b9d5" />
+      <stop offset="100%" stop-color="#f4cae0" />
+    </linearGradient>
+  </defs>
+  <path id="trianglePath1" d="M0 0 L50 100 L100 0 Z" />
+  <path id="trianglePath2" d="M50 100 L100 40 L100 0 Z" />
+</svg> -->
+
+
+<!--  Contact Me Section -->
+<section class="contact-wrapper" aria-label="contact-me">
+  <div id="contact" class="contact-slug">
+    {% comment %}
+    <!-- id="contact" is just so if someone clicks on a hyperlined contact somwhere it will take them to the contact section. Right now this is in footer, should I change it to take to contact box on other page? -->
+    {% endcomment %}
+    <h2>
+      I’m currently taking on new projects
+      <br>
+    </h2>
+    <p>
+      Let's work together
+    </p>
+  </div>
+
+  <!--  Contact Me Button -->
+  <div class="contact-button">
+    <button type="button">
+      Message Me
+    </button>
+  </div>
+</section>

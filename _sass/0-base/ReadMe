@@ -1,0 +1,5 @@
+Global sass
+
+Contains variables & main styles that need to be site wide
+
+This is the first file that is called in main.sass (file which is compiled into css) because it contains variables that need to be declared before they can be used. So when we call things they're already declared in here

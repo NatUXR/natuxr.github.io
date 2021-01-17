@@ -1,0 +1,107 @@
+<!--Navigation-->
+<nav class="nav-wrap">
+   <a href="{{ site.url }}/" class="nav-logo"> 
+      {% comment %} /*insert svg logo file here*/ {% endcomment %}
+   </a>
+   
+   <!-- Desktop Navigation Links -->
+   <ul class="navigation">
+      <li> 
+         <a href="{{ site.url }}/">Home</a>
+      </li>
+      <li> 
+         <a href="{{ site.url }}/resume">Resume</a>
+      </li>
+      <!-- <li> 
+         <a href="{{ site.url }}/case-studies">Case Studies</a>
+      </li> -->
+      <!-- <li>
+         <a href="{{ site.url }}/academic-cv">Academic CV</a>  
+      </li> -->
+      <li>
+         <a href="{{ site.url }}/about-me">About Me</a>
+      </li>
+      <li>
+         <a href="{{ site.url }}/about-me">Contact</a>
+      </li>
+   </ul>
+
+
+   <!-- Mobile Navigation -->
+
+   <!-- Menu Button -->
+   <button type="button" class="mobile-nav-toggle" onclick="myFunction(this)" aria-expanded="false" aria-controls="menu-list">
+      <span class="button-icon">
+         <span class="bar1" aria-hidden="true"></span>
+         <span class="bar2" aria-hidden="true"></span>
+         <span class="bar3" aria-hidden="true"></span>
+       </span>
+      <p class="btn_text">Menu</p>
+    </button>
+
+   <!-- Mobile Menu -->
+   <div class="mobile-nav-overlay"></div>
+   <div class="mobile-nav-overlay-wrapper">
+      
+      <!-- Mobile Navigation Links -->
+      <ul class="nav-links-wrapper" id="menu-list" hidden>
+         <li>
+            <a href="{{ site.baseurl }}/" class="internal-link-wrapper">
+               <h4>Home</h4>
+               <span class="color-effect"></span>
+               <!-- <div class="internal-link-icon internal-link-icon-home"></div> -->
+            </a>
+         </li>
+
+         <li>
+            <a href="{{ site.baseurl }}/resume" class="internal-link-wrapper">
+               <h4>Resume</h4>
+               <span class="color-effect"></span>
+               <!-- <div class="internal-link-icon internal-link-icon-resume"></div> -->
+            </a>
+         </li>
+
+         <!-- <li>
+            <a href="{{ site.baseurl }}/case-studies" class="internal-link-wrapper">
+               <h4>Case Studies</h4>
+               <span class="color-effect"></span>
+               <div class="internal-link-icon internal-link-icon-case-studies"></div>
+            </a>
+         </li> -->
+
+         <!-- <li>
+            <a href="{{ site.baseurl }}/academic-cv" class="internal-link-wrapper">
+               <h4>Academic CV</h4>
+               <span class="color-effect"></span>
+               <div class="internal-link-icon internal-link-icon-cv"></div>
+            </a>
+         </li> -->
+
+         <li>
+            <a href="{{ site.baseurl }}/about-me" class="internal-link-wrapper">
+               <h4>About Me</h4>
+               <span class="color-effect"></span>
+               <!-- <div class="internal-link-icon internal-link-icon-about"></div> -->
+            </a>
+         </li>
+
+         <li>
+            <a href="{{ site.baseurl }}/about-me" class="internal-link-wrapper">
+               <h4>Contact</h4>
+               <span class="color-effect"></span>
+               <!-- <div class="internal-link-icon internal-link-icon-about"></div> -->
+            </a>
+         </li>
+
+         <hr/>
+
+         <li class="external-nav-links-wrapper">
+            <a href="{{ site.linkedin_path}}" target="_blank" class="external-link-wrapper">
+            <small>LinkedIn</small>
+            <div class="external-link-icon external-link-icon-linkedin"></div>
+            </a>
+         </li>
+      </ul>
+   </div>
+</nav>
+<!-- End Navigation -->

@@ -1,0 +1,162 @@
+/*Section Divider - mtns*/
+// #mtns 
+//    position: relative
+//    top: 10px
+
+   // path
+   //    fill: #64a6bd
+   //    stroke: #f4cae0
+
+
+.section-divider
+   width: 100%
+   height: 0
+   padding: 0
+   padding-bottom: 25%
+   margin: 0 auto
+   background
+      image: url('../images/mtns_1920.svg')
+      repeat: no-repeat
+      position: center center
+      size: cover
+
+footer.footer-wrapper
+   //border: 3px solid blue
+   display: flex
+   flex-direction: column
+   align-items: center
+   width: 100%
+   //padding: 10px 10px 10px 10px
+   padding-right: 10px
+   padding-left: 10px
+   background: $maximum-blue1
+
+   .footer
+      //border: 3px solid green
+      display: flex
+      flex-wrap: nowrap
+      align-items: center
+      justify-content: space-between
+      margin: 0px 15px
+      width: 100%
+      max-width: 1080px
+      height: auto
+      //padding: 60px 20px 0 20px
+
+      ////Navigation Links////
+      .footer-links
+         //border: 3px solid blue
+         display: flex
+         justify-content: center
+         align-items: center
+         flex-wrap: wrap
+         height: auto
+         margin: 10px auto auto
+         color: #232323
+         font-size: 1rem
+
+         a
+            transition: all 0.2s ease-in
+            color: #232323
+            
+            &:hover
+               color: lighten(white, 80%)
+               font-weight: 600
+
+            //Prewritten so I can style later
+            // &:focus
+            //    box-shadow: 0 0 0 0.25rem
+            
+            &:active
+               transform: translateY(1px)
+               filter: saturate(150%)
+
+      ////Social Links////
+      .footer-social-links
+         //border: 3px solid red
+         display: flex
+         flex-direction: row
+         justify-content: center
+         align-items: center
+         //change to space-between if multiple items
+         width: 100%
+         max-width: 100px
+         height: 50px
+         margin: auto
+         //needed?
+         //padding-bottom: 39px 
+            
+         .social-icon-wrap
+            //border: 3px solid green
+            display: inline-block
+            width: 45px
+            height: 45px
+            overflow: hidden
+            //background: pink
+            transition: all 0.2s ease-in
+
+         .footer-linkedin-wrapper
+            margin-right: 50px
+            background: 
+               image: url('../images/icons/linkedin.svg')
+               repeat: no-repeat
+               position: left center
+               size: 75%
+
+            //These interactions were originally in .social-icon-wrap,
+            //retest if I ever add a 2nd social media icon
+            &:hover
+               transform: scale(.95)
+
+            //Prewritten so I can style later
+            // &:focus
+            //    box-shadow: 0 0 0 0.25rem
+
+            &:active
+               transform: translateY(1px)
+               filter: saturate(150%)
+
+      // //Copyright
+      // .copyright
+      //    border: 3px solid red
+      //    display: flex
+      //    justify-content: center
+      //    width: 100%
+      //    max-width: 235px
+      //    margin: auto
+
+      //    small
+      //       padding-bottom: 5px
+      //       color: #B5B5B5
+
+
+      //Separator Bars
+      //.sep_bar1, //.sep_bar2
+         // display: inline-block
+         // width: 55px
+         // height: 2px
+         // margin: 6px 0
+         // background-color: #B5B5B5
+         // opacity: 0
+         // transform: rotate(90deg)
+         // transition: 0.4s
+
+
+   @media screen and (max-width: 600px)
+      .footer
+         flex-wrap: wrap
+         // .sep_bar1, .sep_bar2
+         //    display: inline-block
+         //    width: 200px
+         //    height: 1.5px
+         //    margin: 10px auto
+         //    background-color: #232323
+         //    opacity: 1
+         //    transform: rotate(0deg)
+
+         .footer-social-links
+            max-width: 100%
+         
+         .copyright
+            max-width: 100%
+

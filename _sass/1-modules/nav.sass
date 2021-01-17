@@ -1,0 +1,379 @@
+////////////////////////
+//Navigation
+////////////////////////
+nav.nav-wrap
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   z-index: 900
+   display: block
+   //Changed to block to get button to work
+   //display: flex
+   //justify-content: center
+   //previously space-between
+   max-width: 1000px   
+   padding: 10px
+   margin: auto
+   transition: all 0.3s ease-in
+
+   @media screen and (max-width: 600px)
+      padding: 35px 20px
+
+   ////Logo Placeholder////
+   a.nav-logo
+      height: 50px
+      background: pink
+      border: 3px solid black
+
+      svg
+         height: 100%
+         width: auto
+         path
+            fill: $comp-grey
+
+   ////List of Nav Items////
+   ul.navigation
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      text-align: center
+
+      @media screen and (max-width: 600px)
+         display: none
+
+      li
+         display: block
+         padding-right: 25px
+         border: 3px solid black
+         white-space: normal
+
+         a
+            color: #232323
+            font-family: $font-stack
+            //Maybe changed back to font-stack-three Karla
+            font-size: 1.3333em
+            //font-weight: 600
+            transition: all 0.15s ease-in
+
+            &:hover
+               color: $secondary-color
+               font-weight: 600
+               text-decoration: underline
+
+            //Style later
+            // &:focus
+            //    box-shadow: 0 0 0 0.25rem
+
+            &:active
+               color: darken(white, 25%) 
+
+
+////Mobile Nav & Toggles////
+.mobile-nav-toggle
+   //border: 3px solid black
+   position: relative
+   left: calc(100vw - 250px)
+   z-index: 1003
+   display: inline-block
+   // If I change it back to flex
+   // align-items: center
+   // justify-content: center
+   // Revisit using flex-end here
+   width: 155px
+   height: 55px
+   //margin: auto
+   padding: unset
+   // padding-left: 50px
+   // overflow: visible
+   background: none
+   border: 2px solid black
+   border-radius: 4px
+   cursor: pointer
+
+   .btn_text
+      position: relative
+      //top: -14px
+      display: inline-block
+      margin: 0
+      padding-left: 5px
+      font-size: 1.5833rem
+
+   //Style later
+   // &:hover
+   //    color: darken(black, 25%)
+   //    font-weight: 600
+      
+   // &:focus
+   //    box-shadow: 0 0 0 0.25rem
+   
+   &:active
+      transform: translateY(2px)
+      //Move down 10px
+      filter: saturate(150%)
+
+////Menu Button////
+.button-icon
+   border: 3px solid red
+   position: relative
+   top: 5px
+   display: inline-block
+   width: 40px
+   height: 30px
+   //margin-right: 3px
+   cursor: pointer
+
+.bar1,
+.bar2,
+.bar3
+   display: block
+   position: absolute
+   z-index: 1003
+   width: 35px
+   height: 5px
+   background-color: #333333
+   //margin: 6px 0
+   opacity: 1
+   border-radius: 3px
+   //transition: 0.4s
+   //transform-origin: 15px 0px
+
+
+////Bars in Menu position (Closed Menu)////
+.bar1
+   top: 0
+   transform: rotate(0deg)
+   transition: transform .25s ease, top .25s ease .25s
+  
+.bar2
+   top: 50%
+   transform: translateY(-50%)
+   transition: opacity .5s ease
+
+.bar3
+   bottom: 0
+   transform: rotate(0deg)
+   transition: transform .25s ease, bottom .25s ease .25s
+
+
+////Bars in Close position (Open Menu)////
+.change .bar1
+   top: 10px
+   transform: rotate(45deg)
+   transition: transform .25s ease .25s, top .25s ease
+   //background: white
+
+.change .bar2
+   opacity: 0
+   transition: opacity .5s ease
+   //transition for middle one fading out
+
+.change .bar3
+   bottom: 10px
+   transform: rotate(-45deg)
+   transition: transform .25s ease .25s, bottom .25s ease
+   //background: white
+
+   /* To Add - changes color & smooth/slows? transition
+   //transition: transform 0.5s ease-in-out, background 0.5s ease-in-out, opacity 0.55s ease
+
+
+////Mobile Menu Overlay////
+.mobile-nav-overlay-wrapper
+   position: fixed
+   top: 0
+   right: 0
+   bottom: 0
+   z-index: 1002
+   display: flex
+   flex-direction: column
+   align-items: flex-end
+   width: 300px
+   height: 100%
+   padding: 35px 0px 35px 0
+   background: white
+   transform: translateX(300px)
+   //Move right 300px (off screen)
+   transition: all 0.2s ease-in-out
+   //Change # to to change how fast it closes
+
+
+   ////Mobile Menu Links////
+   .nav-links-wrapper, .external-nav-links-wrapper
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      //width: 300px
+      text-align: right
+      list-style: none
+         
+      ul:li::before
+         content: "\200B"
+
+         //Safari has an issue whereby unordered lists with a list-style value of none applied to them will not be recognized as a list in the accessibility tree (https://developer.mozilla.org/en-US/docs/Web/CSS/list-style)
+
+   hr
+      width: 90%
+      margin: 20px 0
+
+   .nav-links-wrapper
+      height: 450px
+      margin-top: 100px
+
+      li
+         border: 3px solid red
+         position: relative
+         display: flex
+         flex-direction: row
+         align-items: center
+         justify-content: flex-end
+         //width: 250px
+         //height: 50px
+         margin-bottom: 5px
+      
+         h4
+            //position: relative
+            z-index: 1000
+            // line-height: 1
+            // white-space: pre-line
+            // These were used when "About Me + Contact" were one page
+
+      .internal-link-wrapper
+         display: flex
+         flex-direction: row
+         align-items: center
+         justify-content: flex-end
+         width: 210px
+         height: 55px
+         padding-right: 20px
+         border: 1px solid blue
+
+         &:hover, &:focus
+            box-shadow: 0 0 0 0.25rem
+
+            .color-effect
+               position: absolute
+               display: flex
+               width: 0%
+               height: inherit
+               background: $maximum-blue1
+               animation: menuBlock 1s cubic-bezier(.74, .06, .4, .92) forwards
+         
+         //Goal: make the color for each menu item different
+         // &:last-child
+         //    // &:hover, &:focus
+         //       background: $cadet-grey2
+         // &:nth-last-of-type(2)
+         //    // &:hover, &:focus
+         //       background: $blue-bell3
+         // .color-effect:nth-child(4)
+         //    background: $pink-lavender4
+
+         &:active
+            transform: translateY(1px)
+            //Move down 1px
+            filter: saturate(150%)
+
+   .external-nav-links-wrapper
+      height: 122px
+
+      .external-link-wrapper
+         display: flex
+         flex-direction: row
+         align-items: center
+         justify-content: flex-end
+         padding-right: 20px
+   
+         &:hover
+            box-shadow: 0 0 0 0.25rem
+
+         //Style later
+         // &:focus
+         //    box-shadow: 0 0 0 0.25rem
+
+         &:active
+            transform: translateY(1px)
+            //Move down 1px
+            filter: saturate(150%)
+
+   .external-link-icon, .internal-link-icon
+      width: 30px
+      height: 30px
+      margin-left: 20px
+      background:
+         repeat: no-repeat
+         position: center center
+         size: contain
+
+   ////Icon images (likely to be deleted)////
+   // .internal-link-icon-home
+   //    background-image: url('../images/icons/home.svg')
+   // .internal-link-icon-case-studies
+   //    background-image: url('../images/icons/case-studies.svg')
+   // .internal-link-icon-resume
+   //    background-image: url('../images/icons/resume.svg')
+   // .internal-link-icon-cv
+   //    background-image: url('../images/icons/CV3.svg')
+   // .internal-link-icon-about
+   //    background-image: url('../images/icons/about.svg')
+   // /*.internal-link-icon-contact
+   //    background-image: url('../images/icons/contact.svg')*/
+
+   .external-link-icon-linkedin
+      background-image: url('../images/icons/linkedin.svg')
+
+
+////Mobile Menu Open & Close Mechanic////
+.mobile-nav-overlay
+   position: fixed
+   top: 0
+   right: 0
+   bottom: 0
+   left: 0
+   z-index: 1000
+   display: block
+   width: 100%
+   height: 100%
+   background: rgba(0,0,0,0.7)
+   opacity: 0
+   transform: translateX(100%)
+   //Move to the right, half way off the screen
+   transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s
+
+html.nav-open
+   body
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      overflow: hidden
+   .mobile-nav-overlay
+      opacity: 1
+      transform: translateX(0)
+      //Move to center?
+      transition: opacity 0.2s ease-in-out, transform 0s
+   .mobile-nav-overlay-wrapper
+      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out
+      //Change # to to change how fast it closes
+      transform: translateX(0)
+      //Move to center?
+
+
+////Transition to mobile menu////
+@media screen and(min-width: 600px)
+   [hidden], .mobile-nav-toggle, .mobile-nav-overlay-wrapper, .mobile-nav-overlay
+      display: none
+
+////Mobile Menu Button Icon Transition Animation////
+@keyframes menuBlock
+   0%
+      width: 0%
+      left: 100%
+   50%
+      width: 100%
+      left: 0
+   100% 
+      width: 100%
+      left: 0

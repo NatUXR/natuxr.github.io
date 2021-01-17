@@ -1,0 +1,82 @@
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{ site.description }}">
+
+{% comment %}
+<!--
+<!--SEO?-->
+<meta name="keywords" content="{% for item in site.keywords %}{{ item }}, {% endfor %}YouTuber" />
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/styles.css" />
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png" />
+<link rel="manifest" href="{{ site.baseurl }}/site.webmanifest" />
+<link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#1538c1" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="theme-color" content="#ffffff" />
+
+
+OR 
+
+<link href="favicon.png" rel="shortcut icon" type="{{ site.baseurl }}image/x-icon"/>
+
+<link href="zacharyrnewton-apple-icon.png" rel="{{ site.baseurl }}apple-touch-icon"/>
+
+--> 
+{% endcomment %}
+
+
+
+   {% comment %}
+   <!-- Not sure what this does -->
+   <!--   Original
+   content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+   New--> 
+   {% endcomment %}
+
+<title>{{ site.title }}</title>
+
+   {% comment %}
+   <!-- Not sure what this does -->
+   <!-- Original
+   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+   
+   New-->
+   {% endcomment %}
+
+{% comment %}
+<!--
+<!-- OpenGraph -->
+See Day 1 Video for info on these
+<meta property="og:title" content="{{ site.title }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:locale" content="en_US" />
+
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/og.jpg" />
+or 
+<meta property="og:image" content="" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.url }}" />
+<meta proptery="og:site_name" content="{{ site.title }}" />
+<!-- Twitter OG -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@{{ site.twitterHandle }}" />
+<meta name="twitter:creator" content="@{{ site.twitterHandle }}" /> 
+-->
+{% endcomment %}
+
+<link rel="icon" type="image/x-icon" href="{{ site.url}}/favicon.ico">
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/styles.css">
+
+{% comment %}
+<!-- Original
+<link rel="stylesheet" href="{{ "/assets/css/main.css " | prepend: site.baseurl }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}"> --> 
+{% endcomment %}

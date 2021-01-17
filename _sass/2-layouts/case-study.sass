@@ -1,0 +1,1047 @@
+/*Header for all pages*/
+.case-studies-header
+   position: relative
+   z-index: 1
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: center
+   width: 100%
+   height: 650px
+   max-height: 100vh
+   //background: blue
+      // image: url('../{{ site.path-to-CS-images }}{{ page.featImg }}') 
+      // image: url('{{ site.url }}{{ site.path-to-CS-images }}{{ page.featImg }}') 
+      // goes to /assets/css/{{ site.path-to-CS-images }}{{ page.featImg }}
+      // image: url('.../.../assets/images/case-studies/spot/spot-teamNaya-widescreen.jpg') 
+      repeat: no-repeat
+      position: center center
+      size: cover
+      //Pick this or the html method to pull the image (case-study.html)
+
+.case-studies-title
+   h1
+      position: relative
+      z-index: 5
+      padding-top: 50px
+      margin: 5px
+      text-align: center
+
+
+/*Case Study Styles for All Pages*/
+.case-studies-content-wrapper
+   background: #f4cae0
+
+   .drop-cap::first-letter
+      color: $highlight
+      font-family: $font-stack-one
+      font-size: 3.5rem
+      font-weight: 500
+
+   .block-quote
+      display: block
+      margin: 1rem auto
+      max-width: 500px
+      text-align: center
+      color: $primary-color
+      font-size: 1.3333rem
+      font-style: italic
+      font-weight: 400
+      line-height: 1.5rem
+      //styling copied from Blockquote in style.sass
+
+
+   // Should I put the styling for the summary box here if it's going to be on all pages?
+   .case-studies-wrapper
+      width: 100%
+      max-width: 95%
+      padding: 0 30px 0 30px
+      margin: 55px auto 0 auto
+      background: white
+
+      .hr-border-top-bottom
+         border-top: 4px solid
+         border-bottom: 4px solid
+         border-image-slice: 150 0 150
+         border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 49.75 5'%3E%3Cpath d='M37.31 5a10.53 10.53 0 01-6.49-2.08 9.56 9.56 0 00-6-1.92 9.56 9.56 0 00-5.95 1.92A10.52 10.52 0 0112.44 5a10.53 10.53 0 01-6.49-2.08A9.56 9.56 0 00.04 1V0a10.53 10.53 0 016.45 2.08A9.56 9.56 0 0012.44 4a9.55 9.55 0 005.95-1.92A10.52 10.52 0 0124.88 0a10.53 10.53 0 016.49 2.08A9.56 9.56 0 0037.32 4a9.56 9.56 0 006-1.92A10.53 10.53 0 0149.81 0v1a9.56 9.56 0 00-6 1.92A10.53 10.53 0 0137.31 5z' fill='%2364a6bd'/%3E%3C/svg%3E")
+         border-image-repeat: repeat
+         padding: 30px 0
+         max-width: 100%
+
+      .hr-border-top
+         border-top: 4px solid
+         border-image-slice: 150 0 0
+         border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 49.75 5'%3E%3Cpath d='M37.31 5a10.53 10.53 0 01-6.49-2.08 9.56 9.56 0 00-6-1.92 9.56 9.56 0 00-5.95 1.92A10.52 10.52 0 0112.44 5a10.53 10.53 0 01-6.49-2.08A9.56 9.56 0 00.04 1V0a10.53 10.53 0 016.45 2.08A9.56 9.56 0 0012.44 4a9.55 9.55 0 005.95-1.92A10.52 10.52 0 0124.88 0a10.53 10.53 0 016.49 2.08A9.56 9.56 0 0037.32 4a9.56 9.56 0 006-1.92A10.53 10.53 0 0149.81 0v1a9.56 9.56 0 00-6 1.92A10.53 10.53 0 0137.31 5z' fill='%2364a6bd'/%3E%3C/svg%3E")
+         border-image-repeat: repeat
+         padding-top: 20px
+         max-width: 100%
+
+      .hr-border-bottom
+         border-bottom: 4px solid
+         border-image-slice: 0 0 150
+         border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 49.75 5'%3E%3Cpath d='M37.31 5a10.53 10.53 0 01-6.49-2.08 9.56 9.56 0 00-6-1.92 9.56 9.56 0 00-5.95 1.92A10.52 10.52 0 0112.44 5a10.53 10.53 0 01-6.49-2.08A9.56 9.56 0 00.04 1V0a10.53 10.53 0 016.45 2.08A9.56 9.56 0 0012.44 4a9.55 9.55 0 005.95-1.92A10.52 10.52 0 0124.88 0a10.53 10.53 0 016.49 2.08A9.56 9.56 0 0037.32 4a9.56 9.56 0 006-1.92A10.53 10.53 0 0149.81 0v1a9.56 9.56 0 00-6 1.92A10.53 10.53 0 0137.31 5z' fill='%2364a6bd'/%3E%3C/svg%3E")
+         border-image-repeat: repeat
+         padding-top: 20px
+         max-width: 100%
+
+      .hr-border-left
+         border-left: 4px solid
+         border-image-slice: 0 0 0 150
+         border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5.0042167 49.77'%3E %3Cpath d='m 0.00217264,37.27 a 10.53,10.53 0 0 1 2.07999996,-6.49 9.56,9.56 0 0 0 1.92,-6 9.56,9.56 0 0 0 -1.92,-5.95 A 10.52,10.52 0 0 1 0.00217264,12.4 10.53,10.53 0 0 1 2.0821726,5.91 9.56,9.56 0 0 0 4.0021726,0 h 1 a 10.53,10.53 0 0 1 -2.08,6.45 9.56,9.56 0 0 0 -1.92,5.95 9.55,9.55 0 0 0 1.92,5.95 10.52,10.52 0 0 1 2.08,6.49 10.53,10.53 0 0 1 -2.08,6.49 9.56,9.56 0 0 0 -1.92,5.95 9.56,9.56 0 0 0 1.92,6 10.53,10.53 0 0 1 2.08,6.49 h -1 a 9.56,9.56 0 0 0 -1.92,-6 10.53,10.53 0 0 1 -2.07999996,-6.5 z' fill='%2364a6bd'/%3E%3C/svg%3E")
+         border-image-repeat: repeat
+         padding-left: 20px
+         max-width: 100%
+      
+      /*Summary/Overview Section*/
+      .summary-box
+         display: flex
+         flex-direction: row
+         justify-content: space-between
+         width: 80%
+         margin: 50px auto
+
+         strong
+            font-weight: 600
+
+         /////////////
+         //Template   
+         ////////////
+         .overview
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+            width: 100%
+            //margin-right: 1em
+            //could move this margin to ul on left
+            
+            h1, h2
+               width: 100%
+               margin: auto
+               text-align: center
+
+            p
+               padding: 1.5rem 0
+               font-weight: 400
+               line-height: 1.5rem
+               //Once content is filled out double check how this padding affects sections in normal view and media queries
+
+            div > h3
+               font-family: $font-stack
+               font-size: 1rem
+               font-weight: 600
+               line-height: 1.5
+               letter-spacing: 0
+
+            h3 + p
+               padding-top: 0
+
+            .accordion
+               margin: 20px 0 40px 0
+
+            .project-temp, .question, .findings, .background, .solution
+               flex: 1 0 auto
+               width: 100%
+
+            .solution
+               margin: 1em 0 0 0
+
+               p
+                  margin-left: 20px
+         
+            .goal, .timeline
+               flex: 0 0 auto
+               width: 50%
+
+            .goal
+               padding-right: 1em
+
+            .prompt-temp, .topic-temp
+               flex: 0 0 auto
+               width: 50%
+
+            .prompt-temp
+               padding-right: 1em
+
+
+
+         .team
+            width: 100%
+
+            span
+               display: inline-block
+               margin-left: 20px
+
+         .setting
+            padding: 1.5em 0 .5em 0
+
+            h3
+               display: inline
+
+            p
+               display: inline-block
+               padding-bottom: .5em
+               margin-left: 20px
+               
+
+         .small
+            margin-right: 1em
+            //could move this margin to ul on left
+
+         .side
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            //justify-content: space-between
+            width: 25%
+            //Use above if I want to put more content above methods section. Unsure if this is even needed when there's only 1 item
+            height: 560px
+            margin-top: 4.9em
+
+            h3
+               padding-left: .25em
+               font-family: $font-stack
+               font-size: 1rem
+               font-weight: 600
+               line-height: 1.5
+               letter-spacing: 0
+
+            h3 + ul
+               padding-top: 0
+
+            ul ~ h3
+               padding-top: 1.25em
+
+            ul
+               padding: 1.5em 0 .5em .25em
+               margin: 0
+               list-style-position: inside
+               list-style: none
+               //Mess with margin & padding once content is filled out to make titles of this section % question section level 
+
+               // li::before
+               //    content: "\200B"
+               //    //Safari has an issue whereby unordered lists with a list-style value of none applied to them will not be recognized as a list in the accessibility tree (https://developer.mozilla.org/en-US/docs/Web/CSS/list-style)
+
+               li:first-of-type
+                  margin-top: .25em
+
+
+         ////////////////////////////
+         //Project Overview 1 - Test  
+         ///////////////////////////
+         .project
+            display: flex
+            //flex: 1 0 auto
+            flex-direction: row
+            justify-content: flex-start
+            margin-right: 1em
+
+            .prompt
+               flex: 0 0 auto
+               width: 85%
+               padding: 1.2rem .75rem 0 0
+               margin: auto
+
+               h3, p
+                  display: inline
+
+            .topic
+               flex: 0 0 auto
+               width: 35%
+               max-width: 138px
+               padding: 0 0 0 1em
+               margin: auto
+
+               img
+                  display: block
+                  margin: auto
+
+               a
+                  display: block
+                  margin: auto
+                  line-height: .75rem
+                  text-align: center
+
+         // delete
+         // .test
+         //    display: flex
+         //    flex-direction: column
+         //    flex-direction: column-reverse
+               
+         /////////////
+         //Float Test  
+         /////////////
+         // .intro
+         //    display: flex
+
+         //    .logo
+         //       width: auto
+         //       height: auto
+         //       float: right
+         //       flex: 0 0 auto
+         //       width: 35%
+         //       max-width: 138px
+         //       padding: 0
+         //       margin: auto
+
+         //       img
+         //          display: block
+         //          margin: auto
+
+         //       a
+         //          display: block
+         //          margin: auto
+         //          line-height: .75rem
+         //          text-align: center
+         //Can adjust these once content is filled out
+
+
+
+         .section-box
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            margin: 1em 1em 1em 0
+
+            .focus-head
+               flex: 0 0 auto
+               width: 27%
+               max-width: 215px
+               padding: 1em .12em 0 0
+               //padding-right: 1em
+               margin: auto
+               margin-left: 0
+               
+               p
+                  padding-bottom: 0
+
+                  span
+                     display: inline-block
+                     margin: 20px 0
+
+            .focus-body
+               flex: 0 0 auto
+               width: 78%
+               //padding: 1.2rem 0 0 .75rem
+               padding: .5em 0 .5em .75em
+
+            
+         
+
+         //When screen is less than 750px
+         @media screen and ( max-width: 750px )
+            flex-direction: row
+            .project
+               flex-direction: column
+               align-items: baseline
+
+               .prompt, .topic
+                  align-items: center
+                  width: 100%
+                  padding-right: 0
+
+               .topic
+                  max-width: 203px
+                  padding: 0
+                  margin-top: 7px
+
+            .section-box
+               flex-direction: column
+               align-items: baseline
+               margin: 1.5em 1em 1em 0
+
+               .focus-body
+                  align-items: center
+                  width: 100%
+                  padding-left: 0px
+                  margin-left: 20px
+
+               .focus-head
+                  align-items: center
+                  width: 100%
+                  max-width: 100%
+                  margin: auto
+ 
+                  p
+                     span
+                        display: inline-block
+                        margin: 0 0 10px 20px
+
+                  //delete?
+                  // span
+                  //    display: inline-block
+                  //    margin-bottom: 0px
+
+                  // span:nth-of-type(2)
+                  //    display: inline-block
+                  //    margin-left: 20px
+
+               .hr-border-left
+                  border-left: 0
+                  
+
+            .intro
+               display: flex
+               flex-direction: column
+               flex-direction: column-reverse
+
+
+         //Can adjust these once content is filled out
+         @media screen and ( max-width: 700px )
+            flex-direction: column
+            .overview, .side
+               flex-direction: row
+               align-items: baseline
+               width: 100%
+
+            .side
+               margin-top: 0
+
+               ul
+                  padding: 0 2em
+
+
+         @media screen and ( max-width: 500px )
+            .overview, .side
+               flex-direction: column
+               align-items: flex-start
+               justify-content: flex-start
+
+            .side
+               margin-top: 0
+
+               ul
+                  padding: .5em 2em
+
+               .question, .goal, .timeline, .findings
+                  flex: 1 0 auto
+                  width: 100%
+
+   
+      ///////////////
+      // Process bar
+      ///////////////
+      .process
+         h2
+            text-align: center
+
+         .test
+            box-sizing: border-box
+            display: flex
+            justify-content: space-evenly
+            gap: 1em
+
+            .list-item
+               margin: .5em
+
+               ul
+                  padding: 0
+                  list-style: none
+
+         ol
+            box-sizing: border-box
+            display: flex
+            justify-content: space-around
+            align-items: flex-start
+            gap: 1em
+            list-style: none
+            //padding-left: 0
+            font-size: 1.5rem
+            font-weight: 600
+
+            //review and integrate into new bar
+            a
+               &:hover, &:focus
+                  color: $secondary-color
+                  font-weight: 600
+                  text-decoration: underline
+
+               &:active
+                  font-weight: 600
+                  color: darken(black, 25%)
+
+            //If this is added to new process nav bar, have the opcaity set to 0 when it turns into the bar?   
+            li > ul
+               padding-left: 10px
+               white-space: nowrap
+
+            ul > li
+               // display: block
+               // padding-right: 25px
+               // border: 3px solid black
+               // white-space: normal
+               //margin-left: 20px
+               font-size: 1rem
+               font-weight: 400
+               list-style: none
+               
+               &:before
+                  display: inline-block
+                  margin: -8px 1px
+                  //   margin-left: -20px
+                  //   margin-right: 10px
+                  font-size: 1.25rem
+                  content: '\2514'
+         
+         @media screen and ( max-width: 760px )
+            ol
+               //flex-direction: column
+               flex-wrap: wrap
+               justify-content: space-around
+               align-items: baseline
+               width: 100%
+
+
+
+///////////////////////////
+// Sticky Nav & Process Bar
+///////////////////////////
+
+// //delete?
+// .spa-header
+//    display: -webkit-box
+//    display: -ms-flexbox
+//    display: flex
+//    -webkit-box-orient: horizontal
+//    -webkit-box-direction: normal
+//    -ms-flex-direction: row
+//    flex-direction: row
+//    -webkit-box-pack: justify
+//    -ms-flex-pack: justify
+//    justify-content: space-between
+//    -webkit-box-align: center
+//    -ms-flex-align: center
+//    align-items: center
+//    position: fixed
+//    top: 0
+//    left: 0
+//    right: 0
+//    padding: 0 2em
+//    height: 75px
+//    z-index: 2
+//    -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+//    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+
+// //delete?
+// .spa-header--scrolled
+//    background: #fafafa
+//    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+
+// //delete?
+// .spa-header--move-up
+//    -webkit-transform: translateY(-75px)
+//    transform: translateY(-75px)
+//    -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+//    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+
+// //delete?
+// .spa-header__link
+//    margin-left: 1em
+//    color: #000
+
+// //delete?
+// .spa-header__logo
+//    color: #000
+
+.sticky-nav-tabs, .spa-slide
+   display: -webkit-box
+   display: -ms-flexbox
+   display: flex
+   -webkit-box-orient: vertical
+   -webkit-box-direction: normal
+   -ms-flex-direction: column
+   flex-direction: column
+   -webkit-box-pack: center
+   -ms-flex-pack: center
+   justify-content: flex-start //previously center
+   -webkit-box-align: flex-start
+   -ms-flex-align: flex-start
+   align-items: center
+   height: 35vh
+   position: relative
+   //background: #eee
+   text-align: center
+   padding: 0 2em
+
+.spa-slide
+   height: 100%
+   padding: 0
+   text-align: left
+
+   p
+      font-weight: 500
+
+   // h3:nth-of-type(2n)
+   //    margin-top: 45px  
+
+   h3, h4, h5, h6
+      text-align: center
+
+   p + h4
+      margin: 1.25em 0 .5em 0
+
+   h5
+      margin: .5em 0 .5em 0
+
+   h6
+      margin: 1em 0 .5em 0
+
+   ul
+      margin: 1em auto 1.8em auto
+
+   .insight-wrapper
+      margin-top: 65px
+
+   .overview-research
+      display: flex
+      justify-content: space-around
+      align-items: flex-start
+      flex-wrap: wrap
+      margin: 45px 0 50px 0
+
+      .item
+         //border: black solid
+         flex: 1 1 50%
+
+         ul
+            margin: auto
+
+
+      .small
+         flex: 0 1 32%
+         //previously flex: 1 1 33%
+         margin: auto
+         border-radius: 0.25rem
+         box-shadow: 0 0 0 3.5px #64a6bd
+
+         h4
+            font-size: 1.33rem
+
+         p
+            margin: auto
+            padding: .75em
+
+      .big
+         border: blue solid
+         flex: 1 1 67%
+
+      .full
+         border: blue solid
+         flex: 1 1 100%
+         p
+            margin: auto
+            text-align: center
+
+   
+.sticky-nav-tabs h1, .spa-slide h1
+   font-size: 3rem
+   margin: 0
+   letter-spacing: .50rem
+
+.sticky-nav-tabs h3 //, .spa-slide h3
+   font-size: 1rem
+   letter-spacing: 0.2rem
+   //opacity: 0.6
+   //margin-right: auto to push to left for "Guiding Research Questions"
+   //text-align: left for "Lit review"
+   //Why?
+
+.sticky-nav-tabs-container
+   display: -webkit-box
+   display: -ms-flexbox
+   display: flex
+   -webkit-box-orient: horizontal
+   -webkit-box-direction: normal
+   -ms-flex-direction: row
+   flex-direction: row
+   position: absolute
+   bottom: 35% //previousley 0
+   width: 100%
+   height: 65px
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+   background-color: #fafafa
+   z-index: 10 //changed
+   -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+
+   ol
+      box-sizing: border-box
+      display: flex
+      justify-content: space-around
+      align-items: center
+      width: 99%
+      padding: 0
+      margin: 0 //including both to get rid of indent in all browsers
+      list-style: none
+      font-size: 1.25rem
+
+      li
+         height: 100%
+         margin: auto
+
+.sticky-nav-tabs-container--top-first
+   position: fixed
+   top: 75px
+   -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+
+.sticky-nav-tabs-container--top-second
+   position: fixed
+   top: 0
+
+   
+.sticky-nav-tab
+   display: -webkit-box
+   display: -ms-flexbox
+   display: flex
+   -webkit-box-pack: center
+   -ms-flex-pack: center
+   justify-content: center
+   -webkit-box-align: center
+   -ms-flex-align: center
+   align-items: center
+   -webkit-box-flex: 1
+   -ms-flex: 1
+   flex: 1
+   height: 100% //added to center the menu items when screen size is decreased
+   color: #000
+   letter-spacing: 0.1rem
+   -webkit-transition: all 0.5s ease
+   transition: all 0.5s ease
+   font-size: 1rem
+
+
+   &:hover, &:focus
+      color: white
+      background: rgba(102, 177, 241, 0.8)
+      -webkit-transition: all 0.5s ease
+      transition: all 0.5s ease
+
+.sticky-nav-tab-slider
+   position: absolute
+   bottom: 0
+   width: 0
+   height: 6px
+   background: #66B1F1
+   -webkit-transition: left 0.3s ease
+   transition: left 0.3s ease
+
+
+.spa-main
+   p
+      //margin-left: 20px
+      //why? What was the purpose of this
+      margin-bottom: 1.3em
+      //margin-top: 1.3em
+      //check what ps are effected with border: solid red
+
+      //selects the guiding research p before the ul
+      &:nth-of-type(2)
+         margin-bottom: 0
+         
+   p, ul, li
+      max-width: 60ch
+
+   .centered-link
+      display: block
+      margin: 1.25em auto 3em auto
+      text-align: center
+   
+   //is this still needed?
+   hr
+      margin: 1.5em auto
+      opacity: .2
+
+
+@media (max-width: 800px)
+   .sticky-nav-tabs h1
+      margin: .5em
+
+   .sticky-nav-tabs h1,  .spa-slide h1
+      font-size: 2rem
+
+   .sticky-nav-tab
+      font-size: 0.8rem
+
+@media (max-width: 600px)
+   .overview-research
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+      .small
+         margin: 35px auto auto auto
+         margin-top: 35px
+         //this isn't working, margin:auto above overriding
+
+@media (max-width: 520px)
+   .sticky-nav-tabs-container
+      ol
+         li
+            height: 100%
+            width: 100%
+            margin: auto
+           
+
+//@media (min-width: 440px)
+   //nav bar starts to get pretty cramped below this
+
+
+
+
+
+//////////////
+// Accordions
+//////////////
+*,
+*:before,
+*:after
+   box-sizing: border-box
+
+/***Accordion container element***/
+.accordion 
+   list-style: none
+   margin: 40px 0 60px 0
+   padding: 0
+
+   & > li 
+      margin: 0
+
+      &:before 
+         content: "\200B" 
+         position: absolute
+         /**
+            * Add zero-width space. needed to ensure Safari + VO respect list semantics.
+            * Set the before content to position absolute to negate any visible space the before content could add to the document.
+            */
+
+/***Accordion Heading***/
+.accordion__heading
+   //border: 1px solid #4464c2
+   font-size: inherit
+   margin: -1px 0 0
+   border-width: 3.5px 0
+   border-style: solid
+
+   &:nth-of-type(n+2)
+      border-top: 0
+
+.accordion__trigger
+   -webkit-appearance: none
+   -moz-appearance: none
+   background-color: #fafafa
+   border: none
+   border-radius: 0
+   box-shadow: none
+   color: #4464c2
+   cursor: pointer
+   display: block
+   font-size: inherit
+   margin: 0
+   padding: .25em 2em .25em 1em
+   position: relative
+   text-align: left
+   width: 100%
+   z-index: 2
+   //Font styling 
+   color: black
+   font-family: $font-stack-two
+   font-size: 1.3rem
+   font-weight: 700
+   letter-spacing: .1rem
+
+   // &:after
+   //    //Original Triangles w/ CSS Shapes
+   //    border-left: .4em solid transparent
+   //    border-right: .4em solid transparent
+   //    border-top: .5em solid #222
+   //    position: absolute
+   //    top: 0
+   //    right: 1.5em
+   //    bottom: 50%
+   //    height: 0
+   //    width: 0
+   //    margin: auto
+   //    transition: transform .2s ease-in-out
+   //    transform-origin: center center
+   //    transform: rotate(0deg)
+   //    content: ''
+
+   &:after, &:before
+      position: absolute
+      //top: 0
+      right: 1.5em
+      bottom: 40%
+      z-index: 9
+      width: 33px 
+      height: 8px
+      margin: auto
+      border: 1px solid #000
+      background: black
+      content: ''
+
+   &:after
+      z-index: 8
+      //transform-origin: 100% 100%
+      transform: rotate(90deg)
+
+      //Plus sign, inline data: uri svg
+      // bottom: 50%
+      // content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='50px' viewBox='0 0 20 20' aria-hidden='true' focusable='false'%3E%3Crect class='vert' height='8' width='2' y='1' x='4' /%3E%3Crect height='2' width='8' y='4' x='1' /%3E%3C/svg%3E")
+      // height: 0
+      // margin: auto
+      // position: absolute
+      // right: 1.5em
+      // top: 0
+      // transition: transform .2s ease-in-out
+      // transform-origin: center center
+      // transform: rotate(0deg)
+      // width: 0
+
+   //Plus & Minus sign w/ CSS Shapes
+   // &:after
+   //    position: absolute
+   //    top: 44%
+   //    //right: 5px
+   //    left: 95%
+   //    z-index: 9
+   //    width: 32px
+   //    height: 8px
+   //    //margin-top: -5px
+   //    background-color: #000000
+   //    content: ''
+      
+   //    [aria-expanded="true"]
+   //       display: none
+
+
+   // &:before
+   //    position: absolute
+   //    top: 21%
+   //    //or 21px
+   //    //bottom: 8px
+   //    left: 96.6%
+   //    z-index: 8
+   //    width: 8px
+   //    height: 32px
+   //    //margin-left: -5px
+   //    background-color: #000
+   //    content: ''
+   //    transition: transform .2s ease-in-out
+            
+   [aria-expanded]:after, [aria-expanded]:before
+      fill: currentColor
+
+
+   &:focus
+      box-shadow: inset 0 0 0 2px #1e82d1
+      //outline: 2px solid
+
+.accordion__panel
+   p
+      margin: auto
+
+   hr
+      margin: 3em auto
+      opacity: .2
+
+   .overview-research
+      margin-top: 0 
+
+.accordion__trigger:hover:after,
+.accordion__trigger:focus:after,
+.accordion__trigger[aria-expanded="true"]:after
+   //border-top-color: #fff
+
+.accordion__trigger[aria-expanded="true"]:after 
+   //transform: rotate(180deg)
+   background-color: #64a6bd
+   border: none
+
+.accordion__trigger[aria-expanded="true"]:before 
+   //transform: rotate(180deg)
+   //background-color: #fff
+
+
+// Review This
+
+// The below is needed to allow a double tap iOS 11
+// Safari + VO to function correctly, if there
+// are multiple elements (wrapper spans) to layout
+// text nodes within the accordion button.
+//    -- This is not needed if a button only contains text
+//       and no other child nodes wrapping the text --
+// .accordion__trigger > * {
+//    pointer-events: none;
+// }
+
+.accordion__trigger:hover,
+.accordion__trigger:focus
+   //background-color: #0e3b5e
+   background-color: #64a6bd
+   //color: #fff
+   color: #000
+   outline: none
+
+.accordion__trigger[aria-disabled="true"]:hover
+   //background-color: #1b75bc
+   background-color: #64a6bd
+   //color: #fff
+   color: #000
+   cursor: not-allowed
+
+.accordion__trigger[aria-disabled="true"]:focus
+   //background-color: #0a2a42
+   background-color: #64a6bd
+
+/***Accordion Panel***/
+.accordion__panel
+   background-color: inherit
+   max-height: 0vh
+   overflow: hidden
+   padding: 0.001em 1.25em
+   position: relative
+   visibility: hidden
+   z-index: 1
+   & > :last-child
+      margin-bottom: 0
+
+.accordion__panel--transition
+   transition: max-height .2s ease-in-out, padding-top .2s ease-in-out, padding-bottom .2s ease-in-out
+
+.accordion__panel[aria-hidden="false"]
+   max-height: 100vh
+   overflow: auto
+   padding: 1.25em
+   visibility: visible
+
+.accordion__trigger[aria-expanded="true"]
+   //background: #1b75bc
+   background: #64a6bd
+   color: #fff
+
+   /////////
+
+
+main.research
+   p
+      margin-left: 20px
+   p, ul, li
+      max-width: 60ch
+
+   hr
+      margin: 3em auto
+      opacity: .2
+
+      
+
+
+//Unsure if this should be in here, or in each pages own sass
+// img
+//    display: block
+//    width: 100%
+//    height: auto
+//    margin: 2em auto
+//    overflow: 
+//    border-radius: 3px
