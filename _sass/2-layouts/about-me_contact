@@ -1,0 +1,30 @@
+.img-me
+  border: 3px solid red
+  position: relative
+  z-index: 1
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 30%
+
+.about-me
+  border: 3px solid red
+  position: relative
+  z-index: 1
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 70%
+  
+.contact
+  border: 3px solid red
+  position: relative
+  z-index: 1
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  
