@@ -37,11 +37,17 @@ plugins:
 # Exclude from processing. 
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to the internal "default list".
-# Excluded items can be processed by explicitly listing the directories or their entries' file path in the `include:` list.
-exclude: ["vendor"]
+# Excluded items can be processed by explicitly listing the directories or their entries' file path in the `include:` list. See https://jekyllrb.com/docs/troubleshooting/#configuration-problems for more info.
+
 exclude:
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - any_additional_item # any user-specific listing goes at the end
 
 sass:
   sass_dir: _sass
