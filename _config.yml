@@ -50,6 +50,7 @@ exclude:
   - vendor/ruby/
   - any_additional_item # any user-specific listing goes at the end
 
+  
 sass:
   sass_dir: _sass
   style: compressed
