@@ -34,7 +34,7 @@ $('.mobile-nav-overlay-wrapper').on('click', function(e){
 
 
 //When any of these classes are clicked toggle 'nav-open' (hide & show menu)
-$('.mobile-nav-toggle, header, .mobile-nav-overlay').on('click', function(){
+$('.mobile-nav-toggle, header .mobile-nav-overlay').on('click', function(){
    $('html').toggleClass('nav-open');
 });
 //Since .mobile-nav-overlay is used here, does that mean the above doesn't do the hiding when a click is registered outside of '.mobile-nav-overlay-wrapper'?
